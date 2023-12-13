@@ -16,10 +16,16 @@ public class UserData {
 
     @PrimaryKey
     private int id;
+    @Indexed
     private String name;
+    @Embedded(onEmpty = Embedded.OnEmpty.USE_NULL, prefix = "user")
+    @Indexed
     private String gender;
+    @Embedded(onEmpty = Embedded.OnEmpty.USE_NULL, prefix = "user")
     @Indexed
     private int age;
     @Embedded(onEmpty = Embedded.OnEmpty.USE_NULL, prefix = "address")
     private Address address;
+
+
 }
