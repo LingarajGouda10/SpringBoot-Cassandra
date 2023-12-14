@@ -20,7 +20,7 @@ import org.springframework.http.HttpStatus;
         private Throwable throwable;
         private HttpStatus httpStatus;
 
-        public UserException(String customErrorMessage, HttpStatus httpStatus) {
+        public UserException(String customErrorMessage, org.springframework.http.HttpStatus httpStatus) {
         }
     }
 
